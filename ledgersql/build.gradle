@@ -1,0 +1,17 @@
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      artifactId = 'blockbit-language-ledgersql'
+    }
+  }
+}
+
+dependencies {
+  implementation project(":core:api")
+  implementation project(":impl:ethereum")
+
+  implementation "io.opusm:abc-api:$abcVersion"
+  implementation "io.opusm:abc-ethereum:$abcVersion"
+  implementation "io.opusm:abc-quorum:$abcVersion"
+  implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion"
+}
